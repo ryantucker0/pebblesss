@@ -1,0 +1,77 @@
+<!-- revision #33 -->
+<!DOCTYPE HTML>
+
+
+
+<html>
+	<head>
+		<style>
+			canvas#can{
+				border: 1px solid #000;
+			}
+
+			.wrapper{
+				margin: 0 auto;
+				width: 1000px;
+				height: 800px;
+			}
+
+			#scorebox {
+				border: 2px solid black;
+				float: left;
+				height: 100%;
+				padding: 15px;
+
+			}
+			#scoreTitle{
+				font: 23px Helvetica;
+
+			}
+
+			#playerColor {
+				<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.fillStyle = "#FF0000";
+				ctx.fillRect(0,0,20,20);
+				</script>
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td id="scoreCol">
+					<div id="scorebox">
+						<div id="scoreTitle"><u><b>Players Score</b></u></div>
+						
+						<table id="scores">
+						</table>
+					</div>
+				</td>
+				
+
+
+				<td><div class="wrapper">
+					
+					<canvas id="can"></canvas>
+				</div></td>
+			</tr>
+		</table>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="../shared/SnakeGameCore.js"></script>
+		<script type="text/javascript" src="SnakeGameClient.js"></script>
+		<script type="text/javascript">
+			window.WebSocket = window.WebSocket || window.MozWebSocket;
+		
+			var SNAKE_SERVER_IP = "127.0.0.1:1337";
+			
+			document.addEventListener('DOMContentLoaded', function () {
+				var canvas = document.getElementById("can");
+				SnakeGame.init(canvas);
+			});
+		</script>
+	</body>
+</html>

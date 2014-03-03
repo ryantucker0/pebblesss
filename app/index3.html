@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>   
+    <link rel="shortcut icon" href="favicon.ico" >
+    <link rel="icon" type="image/gif" href="http://s1.postimg.org/g92alt1wb/animated_favicon1.gif" >
+    
+    <title> "Pebblesss" a development from HACK NC 2014</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    			<style>
+			canvas#can{
+				border: 1px solid #000;
+			}
+
+			.wrapper{
+				margin: 0 auto;
+				width: 1000px;
+				height: 800px;
+			}
+
+			#scorebox {
+				border: 2px solid black;
+				float: left;
+				height: 100%;
+				padding: 15px;
+
+			}
+			#scoreTitle{
+				font: 23px Helvetica;
+
+			}
+
+			.colorbox {
+				width: 20px;
+				height: 20px;
+			}
+
+			#playerColor {
+				<script>
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.fillStyle = "#FF0000";
+				ctx.fillRect(0,0,20,20);
+				</script>
+			}
+
+
+		</style>
+      
+  </head>
+  <body style="background-color: #484848; color: white;">
+<table>
+<tr>
+  <td>
+  <div id="About Us" style="background-color:#484848; width:300px;float:left; font: 17px sans-serif; text-align:justify;" >
+    <h2>A Pebble watch multiplayer interactive web game. Made in cloudpebble.net with Node.JS, using Websockets and HTML5 Canvas. A Java Script code hack. By the Students of FSU, UNC CH and NC A&T. </h2>
+<BR>
+   <h2> A snake game port from <a herf = "http://higherabstractionlevel.com/html5-multiplayer-snake-game-with-node-js-and-websocket/">Higher Abstraction Level</a> , redesigned to take in the functionality of pebbles. 
+    </h2>
+   <BR><H3>
+    <c>How to play.</c><BR>
+    Use the buttons on your pebbles to control the direction of your colorful snake. Gobble up the blocks for food and grow your snake to anaconda proportions. Master your opponents and be the last snake standing. 
+    </H3>
+
+</div>
+      </td>
+  <td>
+<div id= "GAME" style="background-color:#000000; float:right;"> 
+      
+      		<table>
+			<tr>
+				<!--<td id="scoreCol">
+					<div id="scorebox">
+						<div id="scoreTitle"><u><b>Players Score</b></u></div>
+						
+						<table id="scores">
+						</table>
+					</div>
+				</td>-->
+				
+
+
+				<td><div class="wrapper">
+					
+					<canvas id="can"></canvas>
+				</div></td>
+			</tr>
+		</table>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="../shared/SnakeGameCore.js"></script>
+		<script type="text/javascript" src="SnakeGameClient.js"></script>
+		<script type="text/javascript">
+			window.WebSocket = window.WebSocket || window.MozWebSocket;
+		
+			var SNAKE_SERVER_IP = "127.0.0.1:1337";
+			
+			document.addEventListener('DOMContentLoaded', function () {
+				var canvas = document.getElementById("can");
+				SnakeGame.init(canvas);
+			});
+		</script>
+		
+      </div></td>
+  
+</tr>
+      
+      <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>       
+
+<div id="Header" style="background-color:#00b4de;clear:both;text-align:center; font: 17px sans-serif;">
+ <c><h1>Pebblesss</h1></c></div>
+
+</table>
+      <div id="footer" style="background-color:#00b4de;clear:both;text-align:center; font: 17px sans-serif;">
+ <c><h1>Developers: Matt O'Hagan | Logan Isitt | Ryan Tucker | Sean Hemre | Nikhil Prasad</h1></c></div>
+  </body>
+</html>
+
+<!-- enter the script in header and in DIV TABLE --!>
